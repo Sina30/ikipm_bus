@@ -1,6 +1,6 @@
 # ikipm_bus
 
-Ikipm bus is an NPC system that allows people in FiveM RP servers to have an easy and cheap way to move across the city. There are different bus stations where you can select a predefinite destination.
+Ikipm bus is an NPC system that allows people in FiveM RP servers to have an easy and cheap way to move across the city. There are different bus stations where you can select a predefined destination.
 
 ## Requirements
 * [es_extended](https://github.com/ESX-Org/es_extended)
