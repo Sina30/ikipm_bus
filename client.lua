@@ -71,7 +71,7 @@ function openStationMenu()
     }, function(data, menu) -- Options and functions
         menu.close()
         destinationSelected = data.current.value
-        createRoute(point.Departure, point.DepHead, Config.Locations[data.current.value].Arrival, Config.Locations[data.current.value].Price)
+        createRoute(point.Departure, point.DepHead, Config.Locations[destinationSelected].Arrival, Config.Locations[destinationSelected].Price)
         showtext = true
     end, function(data, menu) -- Close the menu
 	menu.close()
