@@ -41,7 +41,7 @@ Config.Locations = {
         Price = 50
     },
     Sandy = {
-        Name = "Sandy",
+        Name = "Sandy Shores",
         Schedule = vector3(1697.20, 3595.75, 35.60),
         Departure = vector3(1736.46, 3588.81, 34.75),
         DepHead = 302.39,
@@ -49,7 +49,7 @@ Config.Locations = {
         Price = 200
     },
     Paleto = {
-        Name = "Paleto",
+        Name = "Paleto Bay",
         Schedule = vector3(-217.67, 6176.23, 31.20),
         Departure = vector3(-197.899, 6192.67, 31.06),
         DepHead = 133.02,
