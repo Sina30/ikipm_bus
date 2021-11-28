@@ -46,10 +46,10 @@ Citizen.CreateThread(function()
 	for index, value in pairs(Config.Locations) do
 		local blip = AddBlipForCoord(value.Schedule)
 
-		SetBlipSprite (blip, 513)
-		SetBlipDisplay(blip, 4)
-		SetBlipScale  (blip, 0.7)
-		SetBlipColour (blip, 18)
+		SetBlipSprite (blip, Config.BlipSprite)
+		SetBlipDisplay(blip, 2)
+		SetBlipScale  (blip, Config.BlipScale)
+		SetBlipColour (blip, Config.BlipColour)
 		SetBlipAsShortRange(blip, true)
 
 		BeginTextCommandSetBlipName("STRING")

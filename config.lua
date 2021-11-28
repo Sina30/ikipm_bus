@@ -3,9 +3,14 @@ Config = {}
 Config.Locale = "en"
 
 Config.ESXShared = "esx:getSharedObject"
+
 Config.NPC = "a_m_o_genstreet_01"
 Config.Vehicle = "bus"
 Config.Speed = 20.0
+
+Config.BlipSprite = 513
+Config.BlipScale = 0.7 -- Important, in float numbers. (1.0, 1.2, 0.8, 2.0)
+Config.BlipColour = 18
 
 Config.Locations = {
     Station = {
