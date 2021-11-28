@@ -100,10 +100,10 @@ function createRoute(departure, point, destination, money)
                 Wait(5000)
                 if #(destination - GetEntityCoords(player)) <= 15 and onRoute then
                     FinRoute(vehicle, npc, money)
-                    ESX.ShowNotification(_U("success") .. money)
+                    ESX.ShowNotification(_U("success", money))
                 elseif not IsPedInVehicle(player, vehicle, true) and onRoute then
                     FinRoute(vehicle, npc, money)
-                    ESX.ShowNotification(_U("error") .. money)
+                    ESX.ShowNotification(_U("error", money))
                 end
             end
         end)
