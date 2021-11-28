@@ -29,7 +29,7 @@ Citizen.CreateThread(function()
         for index, value in pairs(Config.Locations) do
             if #(value.Schedule - GetEntityCoords(PlayerPedId())) <= 3 then
                 if showtext then
-                    DrawText3D(value.Schedule.x, value.Schedule.y, value.Schedule.z, "[~g~E~s~] Bus Schedule")
+                    DrawText3D(value.Schedule.x, value.Schedule.y, value.Schedule.z, _U("schedule"))
                 end
                 if IsControlJustReleased(0, 38) then
                     point = value
@@ -65,18 +65,18 @@ end)
 
 function openStationMenu()
     ESX.UI.Menu.Open( "default", GetCurrentResourceName(), "bus", {
-	    title    = "Bus Schedule",
-	    align = "bottom-right",
-	    elements = options
+	title    = "Bus Schedule",
+	align = "bottom-right",
+	elements = options
     }, function(data, menu) -- Options and functions
         menu.close()
         destinationSelected = data.current.value
         createRoute(point.Departure, point.DepHead, Config.Locations[data.current.value].Arrival, Config.Locations[data.current.value].Price)
         showtext = true
     end, function(data, menu) -- Close the menu
-	    menu.close()
+	menu.close()
         showtext = true
-	end)
+    end)
 end
 
 function createRoute(departure, point, destination, money)
