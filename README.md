@@ -7,7 +7,7 @@ Ikipm bus is an NPC system that allows people in FiveM RP servers to have an eas
 
 ## Screenshot preview
 ![screenshot](https://i.ibb.co/q7M7BxH/ikipmBus.png)<br />
-Preview: https://www.youtube.com/watch?v=3JLQJpyH32I
+Preview: https://youtu.be/dcypM8rYot0
 
 ## Customization
 You can customize the script in config.lua
