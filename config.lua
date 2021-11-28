@@ -1,5 +1,6 @@
 Config = {}
 
+Config.ESXShared = "esx:getSharedObject"
 Config.NPC = "a_m_o_genstreet_01"
 Config.Vehicle = "bus"
 Config.Speed = 20.0
