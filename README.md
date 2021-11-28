@@ -23,3 +23,6 @@ You can customize the script in config.lua
 2) Extract the .zip or open the .zip.
 3) Place ```ikipm_bus``` in your ESX Directory
 4) Add  ```start ikipm_bus``` to your server.cfg
+
+### Terms of use
+By downloading this script you accept you will accomplish Terms of use specified in the license.md file.
