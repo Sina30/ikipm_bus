@@ -17,12 +17,12 @@ You can customize the script in config.lua
 * NPC model
 * Speed
 * ESX shared object
+* Blips
 
 ## Download & Installation
-1) Download the .zip.
-2) Extract the .zip or open the .zip.
-3) Place ```ikipm_bus``` in your ESX Directory
-4) Add  ```start ikipm_bus``` to your server.cfg
+1) Clone the repo or download the .zip
+2) Extract the .zip and place ```ikipm_bus``` on your ESX script folder
+3) Add  ```start ikipm_bus``` to your server.cfg
 
 ### Terms of use
 By downloading this script you accept you will accomplish Terms of use specified in the license.md file.
