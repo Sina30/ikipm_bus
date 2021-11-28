@@ -53,7 +53,7 @@ Citizen.CreateThread(function()
 		SetBlipAsShortRange(blip, true)
 
 		BeginTextCommandSetBlipName("STRING")
-		AddTextComponentSubstringPlayerName("Bus stop")
+		AddTextComponentSubstringPlayerName(_U("blip"))
 		EndTextCommandSetBlipName(blip)
 	end
 end)
@@ -65,7 +65,7 @@ end)
 
 function openStationMenu()
     ESX.UI.Menu.Open( "default", GetCurrentResourceName(), "bus", {
-	title    = "Bus Schedule",
+	title    = _U("menu_title"),
 	align = "bottom-right",
 	elements = options
     }, function(data, menu) -- Options and functions
@@ -98,12 +98,12 @@ function createRoute(departure, point, destination, money)
         Citizen.CreateThread(function()
             while onRoute do
                 Wait(5000)
-                if #(destination) - GetEntityCoords(player)) <= 15 and onRoute then
+                if #(destination - GetEntityCoords(player)) <= 15 and onRoute then
                     FinRoute(vehicle, npc, money)
-                    ESX.ShowNotification("You arrived to your destination. You payed ".. money)
+                    ESX.ShowNotification(_U("success") .. money)
                 elseif not IsPedInVehicle(player, vehicle, true) and onRoute then
                     FinRoute(vehicle, npc, money)
-                    ESX.ShowNotification("You left the bus. You payed ".. money)
+                    ESX.ShowNotification(_U("error") .. money)
                 end
             end
         end)

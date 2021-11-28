@@ -1,5 +1,7 @@
 Config = {}
 
+Config.Locale = "en"
+
 Config.ESXShared = "esx:getSharedObject"
 Config.NPC = "a_m_o_genstreet_01"
 Config.Vehicle = "bus"
