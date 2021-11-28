@@ -6,7 +6,7 @@ Ikipm bus is a
 * [es_extended](https://github.com/ESX-Org/es_extended)
 
 ## Screenshot preview
-![screenshot](https://cdn.discordapp.com/attachments/832973890371584080/839845617761124362/Ikipm.jpg)
+![screenshot](https://i.ibb.co/bsxJCm9/Sin-t-tulo.png)
 
 ## Download & Installation
 1) Download the .zip.
