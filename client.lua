@@ -65,16 +65,16 @@ end)
 
 function openStationMenu()
     ESX.UI.Menu.Open( "default", GetCurrentResourceName(), "bus", {
-		title    = "Bus Schedule",
-		align = "bottom-right",
-		elements = options
-	}, function(data, menu) -- Options and functions
+	    title    = "Bus Schedule",
+	    align = "bottom-right",
+	    elements = options
+    }, function(data, menu) -- Options and functions
         menu.close()
         destinationSelected = data.current.value
         createRoute(point.Departure, point.DepHead, Config.Locations[data.current.value].Arrival, Config.Locations[data.current.value].Price)
         showtext = true
-	end, function(data, menu) -- Close the menu
-		menu.close()
+    end, function(data, menu) -- Close the menu
+	    menu.close()
         showtext = true
 	end)
 end
@@ -98,7 +98,7 @@ function createRoute(departure, point, destination, money)
         Citizen.CreateThread(function()
             while onRoute do
                 Wait(5000)
-                if #(vector3(destination.x, destination.y, destination.z) - GetEntityCoords(player)) <= 15 and onRoute then
+                if #(destination) - GetEntityCoords(player)) <= 15 and onRoute then
                     FinRoute(vehicle, npc, money)
                     ESX.ShowNotification("You arrived to your destination. You payed ".. money)
                 elseif not IsPedInVehicle(player, vehicle, true) and onRoute then
