@@ -82,7 +82,6 @@ end
 function createRoute(departure, point, destination, money)
     onRoute = true
     player = PlayerPedId()
-    vehicleCoords = GetEntityCoords(vehicle)
 
     ESX.Game.SpawnVehicle(Config.Vehicle, departure, point, function(vehicle)
         TaskWarpPedIntoVehicle(player, vehicle, 0)
