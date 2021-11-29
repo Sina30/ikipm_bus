@@ -26,15 +26,15 @@ end)
 Citizen.CreateThread(function()
     while true do
         Wait(10)
-        for index, value in pairs(Config.Locations) do
-            if #(value.Schedule - GetEntityCoords(PlayerPedId())) <= 3 then
-                if showtext then
+        if showtext then
+            for index, value in pairs(Config.Locations) do
+                if #(value.Schedule - GetEntityCoords(PlayerPedId())) <= 3 then
                     DrawText3D(value.Schedule.x, value.Schedule.y, value.Schedule.z, _U("schedule"))
-                end
-                if IsControlJustReleased(0, 38) then
-                    point = value
-                    showtext = false
-                    openStationMenu()
+                    if IsControlJustReleased(0, 38) then
+                        point = value
+                        showtext = false
+                        openStationMenu()
+                    end
                 end
             end
         end
@@ -82,9 +82,11 @@ end
 function createRoute(departure, point, destination, money)
     onRoute = true
     player = PlayerPedId()
+    vehicleCoords = GetEntityCoords(vehicle)
 
     ESX.Game.SpawnVehicle(Config.Vehicle, departure, point, function(vehicle)
         TaskWarpPedIntoVehicle(player, vehicle, 0)
+        SetVehicleDoorsLockedForAllPlayers(vehicle, true)
 
         -- Create NPC
         npc = CreatePed(vehicle, -1, Config.NPC)
@@ -111,19 +113,19 @@ function createRoute(departure, point, destination, money)
 end
 
 function DrawText3D(x, y, z, text)
-    coords = vector3(x, y, z)
+    	coords = vector3(x, y, z)
 	SetTextScale(0.35, 0.35)
-    SetTextFont(4)
-    SetTextProportional(1)
-    SetTextColour(255, 255, 255, 215)
-    SetTextEntry("STRING")
-    SetTextCentre(true)
-    AddTextComponentString(text)
-    SetDrawOrigin(x,y,z, 0)
-    DrawText(0.0, 0.0)
-    local factor = (string.len(text)) / 370
-    DrawRect(0.0, 0.0+0.0125, 0.017+ factor, 0.03, 0, 0, 0, 75)
-    ClearDrawOrigin()
+    	SetTextFont(4)
+    	SetTextProportional(1)
+    	SetTextColour(255, 255, 255, 215)
+    	SetTextEntry("STRING")
+	SetTextCentre(true)
+    	AddTextComponentString(text)
+    	SetDrawOrigin(x,y,z, 0)
+    	DrawText(0.0, 0.0)
+    	local factor = (string.len(text)) / 370
+    	DrawRect(0.0, 0.0+0.0125, 0.017+ factor, 0.03, 0, 0, 0, 75)
+    	ClearDrawOrigin()
 end
 
 function CreatePed(vehicle, pos, model)
